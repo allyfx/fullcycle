@@ -10,10 +10,6 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
-// Drop table for testing purposes
-const cleanDatabase = `DROP TABLE people`
-connection.query(cleanDatabase)
-
 const createTableSql = `
   CREATE TABLE people(
     id INT AUTO_INCREMENT PRIMARY KEY,
